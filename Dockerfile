@@ -96,9 +96,10 @@ RUN mkdir -p /var/cache/nginx /etc/nginx/conf.d /etc/nginx/sites-available
 
 WORKDIR /var/www
 
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY default.conf /etc/nginx/sites-enabled/default.conf
+COPY files/nginx.conf /etc/nginx/nginx.conf
+COPY files/sites-enabled/default.conf /etc/nginx/sites-enabled/default.conf
 COPY index.html /var/www/html/index.html
+
 
 EXPOSE 80
 EXPOSE 443
