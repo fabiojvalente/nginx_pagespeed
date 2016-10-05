@@ -67,7 +67,7 @@ RUN   apt-get clean && \
                   --with-http_image_filter_module=dynamic \
 #                  --with-http_geoip_module=dynamic \
                   --with-http_perl_module=dynamic \
-                  # --add-dynamic-module=debian/extra/njs-1c50334fbea6/nginx \
+#                  --add-dynamic-module=debian/extra/njs-1c50334fbea6/nginx \
                   --with-openssl=/build/${OPENSSL_VERSION} \
                   --with-threads \
                   --with-stream \
@@ -98,7 +98,7 @@ WORKDIR /var/www
 
 COPY files/nginx.conf /etc/nginx/nginx.conf
 COPY files/sites-enabled/default.conf /etc/nginx/sites-enabled/default.conf
-COPY index.html /var/www/html/index.html
+COPY files/index.html /var/www/html/index.html
 
 
 EXPOSE 80
